@@ -1,0 +1,102 @@
+.card-container {
+    max-width: 95vw;
+    min-height: 100vh;
+    margin: 20px 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 10px;
+    background: rgba(105, 105, 105, 0.2);
+    padding: 20px;
+}
+
+.card-list {
+    position: relative;
+    margin: 5px;
+    /* background-color: aqua; */
+    /* color: white; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+    transition: all .5s ease;
+    box-shadow: 0 5px 5px 5px rgba(0, 0, 0, .5);
+
+}
+
+.card-list h2 {
+    margin: 1px 0;
+}
+
+.card-list p {
+    margin: 2px 0;
+}
+
+.card-list input {
+    margin: 5px 0 5px 120px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 0;
+    padding: 5px 5px;
+    background-color: aliceblue;
+    transition: all .8s ease;
+
+}
+
+.card-list input:hover {
+    background-color: black;
+    color: aliceblue;
+    font-weight: 500;
+}
+
+.card-list:hover {
+    transform: rotateY(180deg);
+    box-shadow: none;
+}
+
+.front {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    backface-visibility: hidden;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(105, 105, 105, 0.2);
+    color: white;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 10px;
+    padding: 10px 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all .5s;
+    border: 3px solid white;
+}
+.back p,.front p{
+    font-size: .8rem;
+}
+h2{
+    font-size: 1.5rem;
+}
+.back:hover h2{
+    transform: scale(.8);
+}
