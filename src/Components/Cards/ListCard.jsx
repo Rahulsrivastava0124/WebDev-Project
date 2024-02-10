@@ -10,16 +10,10 @@ const ListCard = ({listData}) => {
                  return ( 
                     <>
                        
-                            <div className="card-list">
-                                <div className="front">
+                            <div className="card-list" style={{backgroundColor: `${curElem.color}`}}>
+                               
                                     <h2>{curElem.title}</h2>
-                                    <p>{curElem.para}</p>
-                                </div>
-
-                                <div className="back">
-                                    <h2>{curElem.title}</h2>
-                                    <p>{curElem.para}</p>
-                                    <input type='button' value='Read More' /></div>
+                                  
                             </div>
 
                         
