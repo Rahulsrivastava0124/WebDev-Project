@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import '../../CSS/Hero/Card.css'
-import ListItem from '../ListApi.js'
+import ListItem from '../listApi.js'
 import ListCard from './ListCard.jsx'
 
 const CardContainer = () => {
 
-    const [listData,setListData] = useState(ListItem);
-  
+  const [listData, setListData] = useState(ListItem);
+
   return (
     <>
-      <ListCard listData = {listData}/>
+      <ListCard listData={listData} />
     </>
   )
 }
