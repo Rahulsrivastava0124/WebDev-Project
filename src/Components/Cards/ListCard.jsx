@@ -4,11 +4,11 @@ const ListCard = ({ listData }) => {
 
     return (
         <>
-            <div className="card-container">
+            <div className="card-container ">
                 {listData.map(({ color, title }) => {
                     return (
                         <>
-                            <div className="card-list" style={{ backgroundColor: `${color}` }}>
+                            <div className="card-list shadow" style={{ backgroundColor: `${color}` }}>
                                 <h2>{title}</h2>
                             </div>
                         </>
