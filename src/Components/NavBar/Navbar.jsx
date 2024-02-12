@@ -29,9 +29,9 @@ const Navbar = () => {
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            {Links.map((item, index) => {
+                            {Links.map(({path,linkName}, index) => {
                                 return (
-                                    <li class={`nav-item  ${index === 0 ? 'active' : ''}`} key={index}><a className='nav-link' href={item.path}>{item.linkName} </a></li>
+                                    <li class={`nav-item  ${index === 0 ? 'active' : ''}`} key={index}><a className='nav-link' href={path}>{linkName} </a></li>
                                 )
                             })
                             }
