@@ -15,6 +15,7 @@ import { parallex } from '../../Function/Hero';
 
 export default function Hero() {
     const el = React.useRef(null);
+
     const LanguageList = [
         '<span class="h2 text-primary" >React.js </span>',
         '<span class="h2 text-success" >Node.js </span>',
@@ -23,6 +24,7 @@ export default function Hero() {
         '<span class="h2 text-primary" >HTML 5 </span>',
         '<span class="h2 text-primary" >CSS 3 </span>'
     ]
+
     React.useEffect(() => {
         const typed = new Typed(el.current, {
             strings: LanguageList,
@@ -30,9 +32,11 @@ export default function Hero() {
             loop: true,
             cursorChar: "<span class='cursor h2 text-danger'>|</span>"
         });
+     
         return () => {
             // Destroy Typed instance during cleanup to stop animation
             typed.destroy();
+
         };
         // eslint-disable-next-line
     }, []);
@@ -49,6 +53,7 @@ export default function Hero() {
                         Hello, What Do You Want To Learn?
                     </h3>
                     <span ref={el}></span>
+                   
                     <div className='mt-5'>
                         <button className='btn btn-primary  btn-lg me-3'>Learn Document </button>
                         <button className='btn btn-warning btn-lg '>Course</button>
