@@ -15,6 +15,7 @@ import { parallex } from '../../Function/Hero';
 
 export default function Hero() {
     const el = React.useRef(null);
+    const el1 = React.useRef(null);
     const LanguageList = [
         '<span class="h2 text-primary" >React.js </span>',
         '<span class="h2 text-success" >Node.js </span>',
@@ -23,6 +24,38 @@ export default function Hero() {
         '<span class="h2 text-primary" >HTML 5 </span>',
         '<span class="h2 text-primary" >CSS 3 </span>'
     ]
+
+    const code_elements = [
+        `<span style="color:blue"><br>import java.util.Scanner;<br>
+            <span style="color:green">public class HelloWorld {<br>
+         <span style="color:yellow">public static void main(String[] args) {<br>
+            <span style="color:blue"> Scanner reader = new Scanner(System.in);<br>
+          <span style="color:white"> System.out.print("Enter a number: ");<br>
+        <span style="color:yellow"> int number = reader.nextInt();<br>
+       <span style="color:green"> System.out.println("You entered: " + number);<br> 
+       <span style="color:blue"> }
+        <span style="color:white"> }</span>`,
+
+        `<span style="color:blue"><br>#include < iostream > <br>
+            <span style="color:green">using namespace std;<br>
+                <span style="color:yellow">int main() {<br>
+                    <span style="color:blue">cout << "Hello World!";<br>
+               <span style="color:white">return 0;
+    } </span>`, `
+   
+   <span style="color:green"> using System;<br>
+    <span style="color:blue">namespace HelloWorld<br>
+      {<br>
+        <span style="color:yellow">class Program<br>
+    {<br>
+        <span style="color:white"> static void Main(string[] args)<br>
+   {<br>
+    <span style="color:yellow"> Console.WriteLine("Hello World!"); <br>   
+        <span style="color:blue">}<br>
+ }
+ <span style="color:white">}</span>`
+    ];
+
     React.useEffect(() => {
         const typed = new Typed(el.current, {
             strings: LanguageList,
@@ -53,32 +86,48 @@ export default function Hero() {
                         <button className='btn btn-primary  btn-lg me-3'>Learn Document </button>
                         <button className='btn btn-warning btn-lg '>Course</button>
                     </div>
-                </div>
-                <div className='container position-relative'>
-                    <img src={Lesson} className='' alt="Hero images" />
-                    <div className=' hero_image_1 parallex_img position-absolute'>
-                        <img src={C} className='float_image' alt="" />
+                    {/* terminal code  */}
+
+                    <div className="terminal-container">
+                        <div className="terminal">
+                            <div className="header">
+                                <div className="circle circle-red"></div>
+                                <div className="circle circle-yellow"></div>
+                                <div className="circle circle-green"></div>
+                                <div className="header-text">booker--xsh-80x24</div>
+                            </div>
+                            <div className="terminal-body">
+                                <p>booker@Alexs-MacBook-Pro ~ % <span ref={el1}></span></p>
+                            </div>
+                        </div>
+                        </div>
+                                 {/* terminal code ended  */}
+
+                        <div className='container position-relative'>
+                            <img src={Lesson} className='' alt="Hero images" />
+                            <div className=' hero_image_1 parallex_img position-absolute'>
+                                <img src={C} className='float_image' alt="" />
+                            </div>
+                            <div className=' hero_image_2  parallex_img position-absolute'>
+                                <img src={C__} className='float_image' alt="" />
+                            </div >
+                            <div className=' hero_image_3  parallex_img position-absolute'>
+                                <img src={nodejs} className='float_image' alt="" />
+                            </div >
+                            <div className=' hero_image_4 parallex_img position-absolute'>
+                                <img src={python} className='float_image' alt="" />
+                            </div >
+                            <div className=' hero_image_5  parallex_img position-absolute'>
+                                <img src={js} className='float_image' alt="" />
+                            </div >
+                            <div className=' hero_image_6  parallex_img position-absolute'>
+                                <img src={html5} className='float_image' alt="" />
+                            </div >
+                            <div className=' hero_image_7  parallex_img position-absolute'>
+                                <img src={css3} className='float_image' alt="" />
+                            </div >
+                        </div>
                     </div>
-                    <div className=' hero_image_2  parallex_img position-absolute'>
-                        <img src={C__} className='float_image' alt="" />
-                    </div >
-                    <div className=' hero_image_3  parallex_img position-absolute'>
-                        <img src={nodejs} className='float_image' alt="" />
-                    </div >
-                    <div className=' hero_image_4 parallex_img position-absolute'>
-                        <img src={python} className='float_image' alt="" />
-                    </div >
-                    <div className=' hero_image_5  parallex_img position-absolute'>
-                        <img src={js} className='float_image' alt="" />
-                    </div >
-                    <div className=' hero_image_6  parallex_img position-absolute'>
-                        <img src={html5} className='float_image' alt="" />
-                    </div >
-                    <div className=' hero_image_7  parallex_img position-absolute'>
-                        <img src={css3} className='float_image' alt="" />
-                    </div >
-                </div>
-            </div>
-        </section>
-    )
+                </section>
+                )
 }
