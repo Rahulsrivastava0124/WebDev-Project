@@ -37,6 +37,10 @@
   left: 190px;
   top: 20px;
 }
+
+.parallex_img {
+  transition: all 0.2s;
+}
 terminal-container {
   height: 250px;
   width: 400px;
@@ -60,7 +64,6 @@ terminal-container {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-
 }
 
 .circle-red {
@@ -83,11 +86,10 @@ terminal-container {
 }
 
 .terminal-body {
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
   padding-left: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
-  font-size: .85rem;
+  font-size: 0.85rem;
   line-height: 1.3;
-
 }
